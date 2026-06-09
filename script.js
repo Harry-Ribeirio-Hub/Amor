@@ -1,7 +1,7 @@
 // ==========================================
 // CONFIGURAÇÕES GERAIS
 // ==========================================
-const senhaCorreta = "amor2026";
+const senhaCorreta = "62024002roma";
 const dataInicio = "2026-04-20T00:00:00";
 const textoTituloPoema = "❤️ O Nosso Amor Além de Tudo ❤️";
 
