@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Amor ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="hearts-container"></div>
+    <canvas id="fireworks"></canvas>
+
+    <button id="music-toggle" class="glass-btn">🎵 Tocar Música</button>
+    <audio id="bg-music" loop>
+        <source src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0c6ff1cb8.mp3?filename=romantic-piano-112123.mp3" type="audio/mpeg">
+    </audio>
+
+    <section id="login-screen" class="screen active">
+        <div class="glass-panel text-center">
+            <h1 class="title">❤️ Área Exclusiva do Amor ❤️</h1>
+            <p class="subtitle">"Apenas pessoas autorizadas podem entrar."</p>
+            <div class="input-group">
+                <input type="password" id="password-input" placeholder="Digite a senha..." autocomplete="off">
+                <button id="btn-login" class="btn-primary">ENTRAR</button>
+            </div>
+            <p id="login-error" class="error-msg hidden">Senha incorreta. Calma amor, tenta de novo. :-)</p>
+        </div>
+    </section>
+
+    <section id="contract-screen" class="screen hidden">
+        <div class="glass-panel modal">
+            <h1 class="title">🚨 COMUNICADO IMPORTANTE 🚨</h1>
+            <div class="contract-text">
+                <p>A partir do momento em que confirmares que estás ciente deste comunicado, estarás a aceitar os seguintes termos e condições:</p>
+                <ul>
+                    <li>Amar-me independentemente de tudo.</li>
+                    <li>Tratar-me muito bem e com todo o carinho.</li>
+                    <li>Casar comigo.</li>
+                    <li>Amar o facto de eu te irritar.</li>
+                    <li>Aceitar que sou eu quem manda em ti.</li>
+                </ul>
+                <h3 class="gold-text">OS TEUS BENEFÍCIOS:</h3>
+                <p>Em contrapartida, além da reciprocidade dos termos acima, passarás a ter um namorado vitalício que te vai amar todos os dias até ao fim do universo. ❤️</p>
+            </div>
+            <div class="contract-actions">
+                <button id="btn-aceito" class="btn-primary">ACEITO ❤️</button>
+                <button id="btn-recuso" class="btn-secondary">RECUSO 😏</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="main-content" class="screen hidden scrollable">
+        <div class="container">
+            <div class="section-block glass-panel">
+                <h1 id="poem-title" class="title"></h1>
+                <div class="poem">
+                    <p>Nós somos tão diferentes, confesso,<br>
+                    Nas manias, na personalidade e até na idade.<br>
+                    Mas nada disso mede ou impede o sucesso<br>
+                    Da nossa mais linda cumplicidade.<br>
+                    Nossos mundos opostos decidiram se unir,<br>
+                    E agora não sei mais viver sem sorrir.</p>
+                    
+                    <p>A distância é chata, tenta nos testar,<br>
+                    Fazendo os dias parecerem compridos.<br>
+                    Queria estar aí agora para te abraçar,<br>
+                    E sussurrar palavras nos teus ouvidos.<br>
+                    Mas sinceramente? Eu não dou a mínima para os quilômetros,<br>
+                    Porque ter você na minha vida já quebra todos os termômetros.<br>
+                    Você é especial demais para eu reclamar,<br>
+                    E a saudade é só um detalhe perto do quanto eu sei te amar.</p>
+                    
+                    <p>O futuro nos guarda algo muito bonito,<br>
+                    Um laço que distância nenhuma vai apagar.<br>
+                    Ter você para mim é tudo o que necessito,<br>
+                    E eu sei que o nosso momento vai chegar.</p>
+                    
+                    <p class="highlight">Então aguarde, meu bem, escute o que eu digo:</p>
+                    <h2 class="gold-text">💍 Falta pouco para eu carregar o seu sobrenome comigo! 💍</h2>
+                </div>
+            </div>
+
+            <div class="section-block glass-panel text-center">
+                <h2 class="title text-sm">⏳ Estamos juntos há:</h2>
+                <div id="counter" class="counter-box">
+                    <div class="time-block"><span id="days">0</span><label>Dias</label></div>
+                    <div class="time-block"><span id="hours">0</span><label>Horas</label></div>
+                    <div class="time-block"><span id="minutes">0</span><label>Minutos</label></div>
+                    <div class="time-block"><span id="seconds">0</span><label>Segundos</label></div>
+                </div>
+            </div>
+
+            <div class="section-block text-center mt-5">
+                <div class="envelope-wrapper" id="envelope">
+                    <div class="envelope">
+                        <div class="flap"></div>
+                        <div class="letter">
+                            <p>"Obrigado por fazeres parte da minha vida.<br><br>
+                            Mesmo com a distância, os desafios e as diferenças, és a pessoa que escolho todos os dias.<br><br>
+                            És o meu presente favorito, o meu lugar seguro e a minha maior certeza.<br><br>
+                            Amo-te infinitamente. ❤️"</p>
+                        </div>
+                        <div class="envelope-front"></div>
+                    </div>
+                </div>
+                <p class="click-hint">Clique no envelope para abrir 💌</p>
+            </div>
+
+            <div class="section-block text-center mb-5">
+                <button id="btn-surprise" class="btn-primary btn-large pulse">🎁 ABRIR SURPRESA FINAL 🎁</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="final-modal" class="screen hidden">
+        <div class="final-content text-center">
+            <h1 id="final-text-1" class="title huge hidden-step">Feliz Dia dos Namorados ❤️</h1>
+            <div id="final-text-2" class="hidden-step mt-4">
+                <h2 class="title gold-text">Queres continuar esta história comigo para sempre? 💍</h2>
+                <button id="btn-sim" class="btn-primary btn-large mt-3">SIM ❤️</button>
+            </div>
+            <h1 id="final-text-epic" class="title huge epic-text hidden-step mt-4">
+                "Então prepara-te... porque este é apenas o começo da nossa história. ❤️"
+            </h1>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
